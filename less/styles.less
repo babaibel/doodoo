@@ -33,7 +33,7 @@ html{
 }
 
 body {
-	font: 16px/1.64 @fontL;
+	font: 16px/1.12 @fontL;
 	width: 100%;
 	background: #fff;
 	color: @black;
@@ -161,6 +161,14 @@ img{
 		display: flex;
 		justify-content: space-around;
 		height: 114px;
+		&-col1{
+			width: 70px;
+			flex-shrink: 0;
+		}
+		&-col2{
+			width: 170px;
+			flex-shrink: 0;
+		}
 	}
 	&-phone{
 		display: inline-block;
@@ -270,6 +278,7 @@ img{
 				-webkit-transform: scale(1.1);
 				-moz-transform: scale(1.1);
 				-o-transform: scale(1.1);
+				transform: scale(1.1);
 			}
 		}
 	}
@@ -758,105 +767,216 @@ img{
 	}
 }
 
-// .botbtn {
-//   height: 71px;
-//   width: 72px;
-//   overflow: hidden;
-//   position: absolute;
-//   top: -33px;
-//   left: 50%;
-//   transform: translateX(-50%);
-//   display: block;
-//   background: url(../img/botbtn.png) no-repeat center center;
-//   z-index: 8;
-// }
+.popup-block{
+	position: relative;
+	background: #FFF;
+	width: auto;
+	max-width: 876px;
+	margin: 20px auto;
+	box-shadow: 2px 4px 16px rgba(82, 82, 82, 0.1);
+	&__body{
+		position: relative;
+		padding: 35px 45px 45px;
+	}
+	&__header{
+		background: #f0d1cf;
+		color: #fff;
+		text-align: center;
+		padding: 16px 70px;
+		position: relative;
+	}
+	.quick-order{
+		display: block;
+		width: 60%;
+		margin: 0 auto;
+		&__right{
+			margin: 25px auto 0;
+		}
+	}
+	&#callbacks-modal{
+		.popup-block__body{
+			padding-top: 120px;
+			padding-bottom: 75px;
+			background-image: url("../img/icons/pink-bear-face-big.png");
+			background-repeat: no-repeat;
+			background-position: center 35px; 
+		}
+	}
+	&#after-modal{
+		max-width: 500px!important;
+	}
+	&#order-modal{
+		.popup-block__body{
+			padding: 30px 55px 50px;
+		}
+	}
+	&--pink{
+		.popup-block__header{
+			background: #f0d1cf;
+		}
+		.popup-modal-dismiss.icon-cross{
+			background-color: #e6c9c7;
+		}
+	}
+	&--blue{
+		.popup-block__header{
+			background: #9ececd;
+		}
+		.popup-modal-dismiss.icon-cross{
+			background-color: #8fc5c4;
+		}
+	}
+	.popup-text{
+		text-align: center;
+		font-size: 20px;
+		font-family: @fontM;
+		color: #6e6e6e;
+	}
+}
 
-// .call-form{
-	
-// 	&__block{
-// 		padding: 0 20px;
-// 		margin: 0 0 20px;
-// 	}
-// 	&__row{
-// 		margin: 0 -20px 10px;
-// 		&:last-child{
-// 			text-align: center;
-// 			margin-bottom: 0;
-// 		}
-// 	}
-// 	&-field{
-// 		font: 300 18px/20px @fontPT;
-// 		border: 2px solid #e6e6e6;
-// 		padding: 15px;
-// 		background: #fff;
-// 		color: #201600;
-// 		display: block;
-// 		width: 100%;
-// 	}
-// 	&-label{
-// 		// font: 300 18px/1.12 @fontOS;
-// 		color: @black;
-// 		font-weight: 300;
-// 		font-size: 18px;
-// 		line-height: 1.12;
-// 		display: block;
-// 		margin-bottom: 10px;
-// 	}
-// }
+.h2-popup-title{
+	font: 25px/35px @fontBubble;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+	text-transform: uppercase;
+	text-shadow: 0 2px 2px rgba(32, 15, 8, 0.15);
+}
+.popup-modal-dismiss.icon-cross{
+	display: block;
+	cursor: pointer;
+	position: absolute;
+	top: 16px;
+	right: 16px;
+	width: 35px;
+	height: 35px;
+	background: url('../img/icons/popup-modal-dismiss.png') no-repeat center center;
+	.trn;
+	&:hover {
+		opacity: .8;
+	}
+}
+.mfp-bg {
+    background: rgba(255, 255, 255, 0.8);
+    opacity: 1;
+}
+.error {
+  border-color: #EF5E5E!important;
+}
+.error:focus {
+  border-color: transparent!important;
+}
 
-// .popup-block{
-// 	position: relative;
-// 	background: #FFF;
-// 	width: auto;
-// 	max-width: 520px;
-// 	margin: 20px auto;
-// 	box-shadow: 0 0 38px rgba(64, 64, 64, 0.47);
-// 	&__body{
-// 		position: relative;
-// 		padding: 35px 45px;
-// 	}
-// 	.dark-btn{
-// 		margin: 10px 0 0;
-// 		line-height: 40px;
-// 	}
-// 	.pink-btn{
-// 		cursor: pointer;
-// 		border: 0;
-// 	}
-// }
-// .popup-text{
-// 	font: 18px/1.64 @fontOS;
-// 	margin: 0 0 35px;
-// }
-// .h2-popup-title{
-// 	font: 700 28px/1.12 @fontOS;
-// 	margin: 0 0 35px;
-// 	padding: 0;
-// 	text-align: left;
-// 	text-transform: uppercase;
-// }
-// .popup-modal-dismiss.icon-cross{
-// 	display: block;
-// 	cursor: pointer;
-// 	position: absolute;
-// 	top: 15px;
-// 	right: 15px;
-// 	width: 16px;
-// 	height: 16px;
-// 	background: url('../img/icons/popup-modal-dismiss.png') no-repeat left top;
-// 	background-size: contain;
-// 	.trn;
-// 	&:hover {
-// 		opacity: .8;
-// 	}
-// }
-// .mfp-bg {
-//     background: rgba(0, 0, 0, 0.47);
-//     opacity: 1;
-// }
-// .error {
-//   border-color: #EF5E5E!important;
-// }
-// .error:focus {
-//   border-color: transparent!important;
-// }
+.order-form{
+	&__row{
+		display: flex;
+		margin-bottom: 30px;
+		&:last-child{
+			margin-bottom: 0;
+		}
+	}
+	&__left{
+		flex-shrink: 0;
+		width: 300px;
+	}
+	&__right{
+		padding-left: 30px;
+		flex-grow: 1;
+		.item-title{
+			font-family: @fontBubble;
+			font-size: 25px;
+			line-height: 1.1;
+			margin: 0 0 15px;
+		}
+		.item-price{
+			font-family: @fontR;
+			font-size: 25px;
+			line-height: 1.1;
+			margin-bottom: 15px;
+			.old{
+				color: #a3a3a3;
+				text-decoration: line-through;
+			}
+			.new{
+				color: #d2a2a0;
+				font-family: @fontB;
+			}
+		}
+		.item-text{
+			p{
+				color: #6e6e6e;
+				font-size: 18px;
+				line-height: 1.17;
+				font-family: @fontR;
+				margin: 0 0 25px;
+			}
+		}
+	}
+	&-tip{
+		color: #000;
+		text-align: center;
+		font-family: @fontBubble;
+		font-size: 22px;
+		text-transform: uppercase;
+		padding-top: 60px;
+		background: url("../img/icons/lgrey-bear-face-ico.png") no-repeat center 5px;
+		font-weight: 700;
+		line-height: 1.2;
+		width: 50%;
+		margin: 0 auto;
+	}
+	&__field{
+		border: 0;
+		border-bottom: 2px solid #c5c6c6;
+		display: block;
+		width: 100%;
+		color: #000;
+		font-family: @fontR;
+		font-size: 18px;
+		line-height: 18px;
+		padding: 5px 30px 5px 0;
+		margin-bottom: 25px;
+		padding-right: 35px;
+	}
+	.field-ok{
+		background: url("../img/icons/ok-ico.png") no-repeat right 5px center;
+	}
+	&__botline{
+		position: relative;
+		text-align: right;
+		margin-top: 50px;
+		&:before{
+			content: "";
+			width: 42px;
+			height: 33px;
+			background: url("../img/lgrey-arr.png") no-repeat left top;
+			position: absolute;
+			left: 70px;
+			top: -7px;
+		}
+		.order-btn{
+			display: inline-block;
+			height: 50px;
+			width: 220px;
+			border-radius: 25px;
+			background: #9ececd;
+			color: #fff;			
+			font-size: 18px;
+			font-weight: 400;
+			font-family: @fontB;
+			text-align: center;
+			line-height: 50px;
+			opacity: 1;
+			text-shadow: 0 2px 2px rgba(32, 15, 8, 0.15);
+			border: 0;
+			cursor: pointer;
+			.trn;
+			&:hover{
+				-webkit-transform: scale(1.1);
+				-moz-transform: scale(1.1);
+				-o-transform: scale(1.1);
+				transform: scale(1.1);
+			}
+		}
+	}
+}
