@@ -13,6 +13,11 @@ $(function() {
 		$('body,html').animate({scrollTop: top}, 1000);
 	});
 
+	$(".js-menu-btn").on("click", function (event) {
+		$(this).toggleClass('_active');
+		$('.js-menu').slideToggle();
+	});
+
 });
 
 $(function() {
@@ -164,3 +169,4 @@ $(function() {
 		appendArrows: $sliderControls
 	});
 });
+
