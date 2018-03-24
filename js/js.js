@@ -18,6 +18,15 @@ $(function() {
 		$('.js-menu').slideToggle();
 	});
 
+	$(".js-more-reviews").on("click", function (event) {
+		var $reviews = $('body').find('.js-review-hide');
+		$reviews.first().addClass('_visible').removeClass('js-review-hide');
+		if($reviews.length <= 1){
+			$(this).hide();
+		}
+		return false;
+	});
+
 });
 
 $(function() {
@@ -44,7 +53,7 @@ $(function() {
 	$('.js-form-phone').each(function(){
 		// Объявляем переменные (форма и кнопка отправки)
 		var form = $(this),
-		    btn = form.find('.phone-btn');
+				btn = form.find('.phone-btn');
 
 		// Добавляем каждому проверяемому полю, указание что поле пустое
 		form.find('.rfield').addClass('empty_field');
@@ -53,10 +62,10 @@ $(function() {
 		function checkInput(){
 			form.find('.rfield').each(function(){
 				if($(this).val() != ''){
-					  // Если поле не пустое удаляем класс-указание
+						// Если поле не пустое удаляем класс-указание
 					$(this).removeClass('empty_field');
 				} else {
-					  // Если поле пустое добавляем класс-указание
+						// Если поле пустое добавляем класс-указание
 					$(this).addClass('empty_field');
 				}
 			});
@@ -80,7 +89,7 @@ $(function() {
 			// Вешаем условие-тригер на кнопку отправки формы
 			if(sizeEmpty > 0){
 			if(btn.hasClass('disabled')){
-			  return false
+				return false
 			} else {
 				btn.addClass('disabled')
 			}
@@ -92,11 +101,11 @@ $(function() {
 
 		// Событие клика по кнопке отправить
 		btn.click(function(){
-		  if($(this).hasClass('disabled')){
-		    // подсвечиваем незаполненные поля и форму не отправляем, если есть незаполненные поля
+			if($(this).hasClass('disabled')){
+				// подсвечиваем незаполненные поля и форму не отправляем, если есть незаполненные поля
 			lightEmpty();
 			return false
-		  } else {
+			} else {
 				form.submit(function (){
 
 					var data = form.serialize();
@@ -166,7 +175,52 @@ $(function() {
 		speed: 500,
 		fade: true,
 		cssEase: 'linear',
-		appendArrows: $sliderControls
+		appendArrows: $sliderControls,
+		responsive: [
+		{
+			breakpoint: 767,
+			settings: {
+				adaptiveHeight: true,
+				arrows: false
+			}
+		}
+	]
 	});
 });
 
+$(function() {
+
+	var $reviews = $('.js-reviews');
+	if(!$reviews.length) return;
+
+	var settings_slider = {
+		dots: false,
+		infinite: true,
+		speed: 500,
+		fade: true,
+		cssEase: 'linear',
+		adaptiveHeight: true,
+		arrows: true,
+		initialSlide: 1
+	}
+	slick_on_mobile( $reviews, settings_slider);
+
+// slick on mobile
+	function slick_on_mobile(slider, settings){
+		$(window).on('load resize', function() {
+			if ($(window).width() > 767) {
+				if (slider.hasClass('slick-initialized')) {
+					slider.slick('unslick');
+				}
+				return
+			}
+			if (!slider.hasClass('slick-initialized')) {
+				return slider.slick(settings);
+			}
+		});
+	};
+});
+
+
+
+$('.js-phone').mask("+375 (999) 999-99-99");
