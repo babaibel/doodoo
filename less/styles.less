@@ -1684,6 +1684,18 @@ img{
 	.catalog-item:hover .heart-btn{
 		width: 180px;
 	}
+	.reviews-item--big .reviews-text-wr{
+		position: static;
+		transform: none;
+		width: 100%;
+		
+	}
+	.reviews-item--big {
+		margin-bottom: 0;
+	}
+	.reviews-item--big .reviews-text{
+		padding: 15px 20px;
+	}
 }
 
 @media (max-width: 767px){
@@ -1748,14 +1760,6 @@ img{
 	}
 	.reviews-item--big {
 		padding: 0;
-	}
-	.reviews-item--big .reviews-text-wr{
-		position: static;
-		transform: none;
-		width: 100%;
-	}
-	.reviews-item--big .reviews-text{
-		padding: 15px 20px;
 	}
 	.main{
 		padding: 25px 0;
@@ -2008,6 +2012,7 @@ img{
 	}
 	.slider-controls .slick-arrow.slick-next,
 	.slider-controls .slick-arrow.slick-prev{
+		top: 100px;
 		&:hover{
 			transform: none;
 		}
@@ -2017,7 +2022,6 @@ img{
 		top: 0;
 		left: 0;
 		right: 0;
-		top: 100px;
 	}
 	.catalog-item .heart-btn {
 		background: #9ececd;

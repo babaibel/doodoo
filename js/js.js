@@ -40,7 +40,6 @@ $(function() {
 	$modalPopup.magnificPopup({
 		type: 'inline',
 		preloader: false,
-		focus: '#username',
 		showCloseBtn: false,
 		mainClass: 'mfp-fade popup-modal-overlay',
 		removalDelay: 300,
@@ -130,17 +129,15 @@ $(function() {
 						},
 						success: function(data){ // сoбытиe пoслe удaчнoгo oбрaщeния к сeрвeру и пoлучeния oтвeтa
 							form[0].reset();
-							$.magnificPopup.close();
 							$.magnificPopup.open({
-								showCloseBtn: false,
-								removalDelay: 300,
-								mainClass: 'mfp-fade',
 								items: {
 									src: '#after-modal'
 								},
-								type: 'inline'
-								}, 
-							0);
+								type: 'inline',
+								showCloseBtn: false,
+								removalDelay: 300,
+								mainClass: 'mfp-fade'
+							}, 0);
 						}
 					});
 					return false;
@@ -220,7 +217,6 @@ $(function() {
 						},
 						success: function(data){ // сoбытиe пoслe удaчнoгo oбрaщeния к сeрвeру и пoлучeния oтвeтa
 							form[0].reset();
-							$.magnificPopup.close();
 							$.magnificPopup.open({
 								showCloseBtn: false,
 								removalDelay: 300,

@@ -1745,6 +1745,19 @@ img {
   .catalog-item:hover .heart-btn {
     width: 180px;
   }
+  .reviews-item--big .reviews-text-wr {
+    position: static;
+    -webkit-transform: none;
+        -ms-transform: none;
+            transform: none;
+    width: 100%;
+  }
+  .reviews-item--big {
+    margin-bottom: 0;
+  }
+  .reviews-item--big .reviews-text {
+    padding: 15px 20px;
+  }
 }
 @media (max-width: 767px) {
   .wrap {
@@ -1806,16 +1819,6 @@ img {
   }
   .reviews-item--big {
     padding: 0;
-  }
-  .reviews-item--big .reviews-text-wr {
-    position: static;
-    -webkit-transform: none;
-        -ms-transform: none;
-            transform: none;
-    width: 100%;
-  }
-  .reviews-item--big .reviews-text {
-    padding: 15px 20px;
   }
   .main {
     padding: 25px 0;
@@ -2068,6 +2071,10 @@ img {
   .slider-wr .h2-title {
     top: 25px;
   }
+  .slider-controls .slick-arrow.slick-next,
+  .slider-controls .slick-arrow.slick-prev {
+    top: 100px;
+  }
   .slider-controls .slick-arrow.slick-next:hover,
   .slider-controls .slick-arrow.slick-prev:hover {
     -webkit-transform: none;
@@ -2079,7 +2086,6 @@ img {
     top: 0;
     left: 0;
     right: 0;
-    top: 100px;
   }
   .catalog-item .heart-btn {
     background: #9ececd;
