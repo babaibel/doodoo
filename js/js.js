@@ -4,11 +4,14 @@ $(function() {
 		fixed_offset = $('.header__main').height();
 	});
 
-	$(".js-catalog-link").on("click", function (event) {
+	$(".js-catalog-link, .js-menu-link").on("click", function (event) {
 		
 		event.preventDefault();
 		var id = $(this).attr('href').split('#')[1], 
 			top = $('#' + id).offset().top;
+
+		$(".js-menu-btn").removeClass('_active');
+		$('.js-menu').slideUp();
 		
 		$('body,html').animate({scrollTop: top}, 1000);
 	});
@@ -20,7 +23,7 @@ $(function() {
 
 	$(".js-more-reviews").on("click", function (event) {
 		var $reviews = $('body').find('.js-review-hide');
-		$reviews.first().addClass('_visible').removeClass('js-review-hide');
+		$reviews.first().slideDown().removeClass('js-review-hide');
 		if($reviews.length <= 1){
 			$(this).hide();
 		}
@@ -39,7 +42,14 @@ $(function() {
 		preloader: false,
 		focus: '#username',
 		showCloseBtn: false,
-		mainClass: 'popup-modal-overlay'
+		mainClass: 'mfp-fade popup-modal-overlay',
+		removalDelay: 300,
+		callbacks: {
+			open: function() {
+				$('.js-popup-slider, .js-popup-slider-preview').slick('reinit');
+			}
+		}
+		
 	});
 
 	$(document).on('click', '.popup-modal-dismiss', function (e) {
@@ -123,6 +133,8 @@ $(function() {
 							$.magnificPopup.close();
 							$.magnificPopup.open({
 								showCloseBtn: false,
+								removalDelay: 300,
+								mainClass: 'mfp-fade',
 								items: {
 									src: '#after-modal'
 								},
@@ -137,30 +149,6 @@ $(function() {
 		});
 	});
 });
-
-// $(function() {
-
-// 	var $contactForm = $('.js-form');
-// 	if(!$contactForm.length) return;
-
-// 	$contactForm.submit(function () {
-// 		$.magnificPopup.close();
-// 		$.magnificPopup.open({
-// 			showCloseBtn: false,
-// 			callbacks: {
-// 				open: function() { $('.header__topline').css('padding-right', swidth + "px"); }, 
-// 				close: function() { $('.header__topline').css('padding-right', 0); },
-// 			},
-// 			items: {
-// 				src: '#after-modal'
-// 			},
-// 			type: 'inline'
-// 			}, 
-// 		0);
-// 		return false;
-// 	});
-// });
-
 
 $(function() {
 
@@ -181,7 +169,7 @@ $(function() {
 			breakpoint: 767,
 			settings: {
 				adaptiveHeight: true,
-				arrows: false
+				dots: false
 			}
 		}
 	]
@@ -205,7 +193,6 @@ $(function() {
 	}
 	slick_on_mobile( $reviews, settings_slider);
 
-// slick on mobile
 	function slick_on_mobile(slider, settings){
 		$(window).on('load resize', function() {
 			if ($(window).width() > 767) {
@@ -221,6 +208,27 @@ $(function() {
 	};
 });
 
+$(function() {
+
+	$('.js-popup-slider').slick({
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		arrows: false,
+		fade: true,
+		asNavFor: '.js-popup-slider-preview'
+	});
+	$('.js-popup-slider-preview').slick({
+		slidesToShow: 3,
+		slidesToScroll: 1,
+		asNavFor: '.js-popup-slider',
+		dots: false,
+		focusOnSelect: true
+	});
+});
+
+$(window).stellar({
+	horizontalScrolling: false
+});
 
 
 $('.js-phone').mask("+375 (999) 999-99-99");

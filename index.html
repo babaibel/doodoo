@@ -49,32 +49,32 @@
 			<div class="wrap">
 				<ul class="menu">
 					<li class="menu__item">
-						<a href="#!" class="menu__link">Главная</a>
+						<a href="#main" class="menu__link js-menu-link">Главная</a>
 					</li>
 					<li class="menu__item">
-						<a href="#!" class="menu__link">DooDoo любят</a>
+						<a href="#likes" class="menu__link js-menu-link">DooDoo любят</a>
 					</li>
 					<li class="menu__item">
-						<a href="#!" class="menu__link">Как работает</a>
+						<a href="#work" class="menu__link js-menu-link">Как работает</a>
 					</li>
 					<li class="menu__item">
-						<a href="#!" class="menu__link">Преимущества</a>
+						<a href="#advantage" class="menu__link js-menu-link">Преимущества</a>
 					</li>
 					<li class="menu__item">
-						<a href="#!" class="menu__link">Каталог</a>
+						<a href="#catalog" class="menu__link js-menu-link">Каталог</a>
 					</li>
 					<li class="menu__item">
-						<a href="#!" class="menu__link">Отзывы</a>
+						<a href="#reviews" class="menu__link js-menu-link">Отзывы</a>
 					</li>
 					<li class="menu__item">
-						<a href="#!" class="menu__link">Контакты</a>
+						<a href="#contacts" class="menu__link js-menu-link">Контакты</a>
 					</li>
 				</ul>
 			</div>
 		</nav>
 	</header>
 
-	<section class="main">
+	<section class="main" id="main">
 		<div class="wrap">
 			<div class="main-video">
 				<iframe width="560" height="315" src="https://www.youtube.com/embed/4R-D_AbunPk?rel=0&amp;controls=0&amp;showinfo=0&amp;autoplay=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
@@ -103,7 +103,7 @@
 		</div>
 	</section>
 
-	<section class="section reviews-wr">
+	<section class="section reviews-wr" id="likes">
 		<div class="wrap wrap--big">
 			<h2 class="h2-title"><span>DooDoo любят</span></h2>
 		</div>
@@ -142,7 +142,7 @@
 		</div>
 	</section>
 
-	<section class="section works-wr">
+	<section class="section works-wr" data-stellar-background-ratio="0.5" id="work">
 		<div class="wrap wrap--big">
 			<h2 class="h2-title"><span>КАК РАБОТАЕТ<br/>Doodoo</span></h2>
 		</div>
@@ -151,12 +151,16 @@
 				<div class="works__item">
 					<img src="img/alarm-clock.png" alt="">
 					<span class="works__item-text">МАЛЫШ<br/>ПРОСЫПАЕТСЯ</span>
-					<span class="animated-arr"></span>
+					<div class="animated-arr-wr">
+						<span class="animated-arr"></span>
+					</div>
 				</div>
 				<div class="works__item">
 					<img src="img/work-bear.png" alt="">
 					<span class="works__item-text">СРАБАТЫВАЕТ ДАТЧИК,<br/>И ИГРУШКА АВТОМАТИЧЕСКИ ВКЛЮЧАЕТ РОЗОВЫЙ ШУМ ИЛИ КОЛЫБЕЛЬНУЮ</span>
-					<span class="animated-arr"></span>
+					<div class="animated-arr-wr">
+						<span class="animated-arr"></span>
+					</div>
 				</div>
 				<div class="works__item">
 					<img src="img/moon.png" alt="">
@@ -166,7 +170,7 @@
 		</div>
 	</section>
 
-	<section class="slider-wr">
+	<section class="slider-wr" id="advantage">
 		<div class="wrap wrap--big">
 			<h2 class="h2-title"><span>ПРЕИМУЩЕСТВА</span></h2>
 		</div>
@@ -309,7 +313,7 @@
 		</div>
 	</section>
 
-	<section class="section reviews-wr reviews--grey"">
+	<section class="section reviews-wr reviews--grey" id="reviews">
 		<div class="wrap wrap--big">
 			<h2 class="h2-title"><span>ОТЗЫВЫ</span></h2>
 		</div>
@@ -345,65 +349,69 @@
 					</div>
 				</div>
 			</div>
-			<div class="reviews reviews--bot js-review-hide">
-				<div class="reviews-item">
-					<div class="reviews-item__photo">
-						<img src="img/anna-sedokova.jpg" alt="Анна Седокова об игрушке DooDoo">
-					</div>
-					<div class="reviews-text-wr">
-						<div class="reviews-item__title">Анна Седокова</div>
-						<div class="reviews-text">Мои подруги знают, что я современная мама и люблю всякие эксперименты. Поэтому посоветовали перед рождением Гектора заказать плюшевого помощника DooDoo.</div>
-					</div>
-				</div>
-				<div class="reviews-item reviews-item--big">
-					<div class="reviews-item__photo">
-						<img src="img/polina-gagarina.jpg" alt="">
-					</div>
-					<div class="reviews-text-wr">
-						<div class="reviews-item__title">Полина Гагарина</div>
-						<div class="reviews-text">
-							Продолжаем экспериментировать со здоровым детским сном в компании с DooDoo. Их “сонный Мишка” теперь всегда с нами - и на прогулках, и в поездках и даже пока мама работает... 
+			<div class="js-review-hide">
+				<div class="reviews reviews--bot">
+					<div class="reviews-item">
+						<div class="reviews-item__photo">
+							<img src="img/anna-sedokova.jpg" alt="Анна Седокова об игрушке DooDoo">
+						</div>
+						<div class="reviews-text-wr">
+							<div class="reviews-item__title">Анна Седокова</div>
+							<div class="reviews-text">Мои подруги знают, что я современная мама и люблю всякие эксперименты. Поэтому посоветовали перед рождением Гектора заказать плюшевого помощника DooDoo.</div>
 						</div>
 					</div>
-				</div>
-				<div class="reviews-item">
-					<div class="reviews-item__photo">
-						<img src="img/anna-khilkevich.jpg" alt="Анна Хилькевич об игрушке DooDoo">
+					<div class="reviews-item reviews-item--big">
+						<div class="reviews-item__photo">
+							<img src="img/polina-gagarina.jpg" alt="">
+						</div>
+						<div class="reviews-text-wr">
+							<div class="reviews-item__title">Полина Гагарина</div>
+							<div class="reviews-text">
+								Продолжаем экспериментировать со здоровым детским сном в компании с DooDoo. Их “сонный Мишка” теперь всегда с нами - и на прогулках, и в поездках и даже пока мама работает... 
+							</div>
+						</div>
 					</div>
-					<div class="reviews-text-wr">
-						<div class="reviews-item__title">Анна Хилькевич</div>
-						<div class="reviews-text">Расскажу историю про сонного друга Ри от DooDoo. Он с самого детства заботится о ее снах. Мы шли в кроватку, я включала мишку, она слушала его мелодию и засыпала.</div>
+					<div class="reviews-item">
+						<div class="reviews-item__photo">
+							<img src="img/anna-khilkevich.jpg" alt="Анна Хилькевич об игрушке DooDoo">
+						</div>
+						<div class="reviews-text-wr">
+							<div class="reviews-item__title">Анна Хилькевич</div>
+							<div class="reviews-text">Расскажу историю про сонного друга Ри от DooDoo. Он с самого детства заботится о ее снах. Мы шли в кроватку, я включала мишку, она слушала его мелодию и засыпала.</div>
+						</div>
 					</div>
 				</div>
 			</div>
-			<div class="reviews reviews--bot js-review-hide">
-				<div class="reviews-item">
-					<div class="reviews-item__photo">
-						<img src="img/anna-sedokova.jpg" alt="Анна Седокова об игрушке DooDoo">
-					</div>
-					<div class="reviews-text-wr">
-						<div class="reviews-item__title">Анна Седокова</div>
-						<div class="reviews-text">Мои подруги знают, что я современная мама и люблю всякие эксперименты. Поэтому посоветовали перед рождением Гектора заказать плюшевого помощника DooDoo.</div>
-					</div>
-				</div>
-				<div class="reviews-item reviews-item--big">
-					<div class="reviews-item__photo">
-						<img src="img/polina-gagarina.jpg" alt="">
-					</div>
-					<div class="reviews-text-wr">
-						<div class="reviews-item__title">Полина Гагарина</div>
-						<div class="reviews-text">
-							Продолжаем экспериментировать со здоровым детским сном в компании с DooDoo. Их “сонный Мишка” теперь всегда с нами - и на прогулках, и в поездках и даже пока мама работает... 
+			<div class="js-review-hide">
+				<div class="reviews reviews--bot">
+					<div class="reviews-item">
+						<div class="reviews-item__photo">
+							<img src="img/anna-sedokova.jpg" alt="Анна Седокова об игрушке DooDoo">
+						</div>
+						<div class="reviews-text-wr">
+							<div class="reviews-item__title">Анна Седокова</div>
+							<div class="reviews-text">Мои подруги знают, что я современная мама и люблю всякие эксперименты. Поэтому посоветовали перед рождением Гектора заказать плюшевого помощника DooDoo.</div>
 						</div>
 					</div>
-				</div>
-				<div class="reviews-item">
-					<div class="reviews-item__photo">
-						<img src="img/anna-khilkevich.jpg" alt="Анна Хилькевич об игрушке DooDoo">
+					<div class="reviews-item reviews-item--big">
+						<div class="reviews-item__photo">
+							<img src="img/polina-gagarina.jpg" alt="">
+						</div>
+						<div class="reviews-text-wr">
+							<div class="reviews-item__title">Полина Гагарина</div>
+							<div class="reviews-text">
+								Продолжаем экспериментировать со здоровым детским сном в компании с DooDoo. Их “сонный Мишка” теперь всегда с нами - и на прогулках, и в поездках и даже пока мама работает... 
+							</div>
+						</div>
 					</div>
-					<div class="reviews-text-wr">
-						<div class="reviews-item__title">Анна Хилькевич</div>
-						<div class="reviews-text">Расскажу историю про сонного друга Ри от DooDoo. Он с самого детства заботится о ее снах. Мы шли в кроватку, я включала мишку, она слушала его мелодию и засыпала.</div>
+					<div class="reviews-item">
+						<div class="reviews-item__photo">
+							<img src="img/anna-khilkevich.jpg" alt="Анна Хилькевич об игрушке DooDoo">
+						</div>
+						<div class="reviews-text-wr">
+							<div class="reviews-item__title">Анна Хилькевич</div>
+							<div class="reviews-text">Расскажу историю про сонного друга Ри от DooDoo. Он с самого детства заботится о ее снах. Мы шли в кроватку, я включала мишку, она слушала его мелодию и засыпала.</div>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -414,7 +422,7 @@
 		</div>
 	</section>
 
-	<section class="section contacts-wr">
+	<section class="section contacts-wr" id="contacts">
 		<div class="wrap wrap--big">
 			<h2 class="h2-title"><span>КОНТАКТЫ</span></h2>
 		</div>
@@ -464,27 +472,26 @@
 		</div>
 	</section>
 
-
 	<footer class="footer-wr">
 		<div class="wrap">
 			<div class="footer">
 				<div class="footer-menu-wr">
 					<div class="footer-menu__col">
 						<ul class="footer-menu">
-							<li><a href="#">Каталог</a></li>
-							<li><a href="#">Почему мы</a></li>
+							<li><a href="#catalog" class="js-menu-link">Каталог</a></li>
+							<li><a href="#advantage" class="js-menu-link">Почему мы</a></li>
 						</ul>
 					</div>
 					<div class="footer-menu__col">
 						<ul class="footer-menu">
-							<li><a href="#">Отзывы</a></li>
-							<li><a href="#">Контакты</a></li>
+							<li><a href="#reviews" class="js-menu-link">Отзывы</a></li>
+							<li><a href="#contacts" class="js-menu-link">Контакты</a></li>
 						</ul>
 					</div>
 					<div class="footer-menu__col">
 						<ul class="footer-menu">
-							<li><a href="#">Оплата</a></li>
-							<li><a href="#">Доставка</a></li>
+							<li><a href="#contacts" class="js-menu-link">Оплата</a></li>
+							<li><a href="#contacts" class="js-menu-link">Доставка</a></li>
 						</ul>
 					</div>
 				</div>
@@ -542,7 +549,28 @@
 				<div class="order-form">
 					<div class="order-form__row">
 						<div class="order-form__left">
-						
+							<div class="popup-slider js-popup-slider">
+								<div class="popup-slider__item">
+									<img src="img/catalog/hugo.jpg">
+								</div>
+								<div class="popup-slider__item">
+									<img src="img/catalog/matis.jpg">
+								</div>
+								<div class="popup-slider__item">
+									<img src="img/catalog/tomas.jpg">
+								</div>
+							</div>
+							<div class="popup-slider-preview js-popup-slider-preview">
+								<div class="popup-slider-preview__item">
+									<img src="img/catalog/hugo.jpg">
+								</div>
+								<div class="popup-slider-preview__item">
+									<img src="img/catalog/matis.jpg">
+								</div>
+								<div class="popup-slider-preview__item">
+									<img src="img/catalog/tomas.jpg">
+								</div>
+							</div>
 						</div>
 						<div class="order-form__right">
 							<div class="item-title">МИШКА МАРТИН</div>
@@ -595,6 +623,7 @@
 	<script src="js/jquery.magnific-popup.min.js"></script>
 	<script src="js/slick.min.js"></script>
 	<script src="js/jquery.maskedinput.js"></script>
+	<script src="js/jquery.stellar.js"></script>
 	<script src="js/js.js"></script>
 </body>
 </html>
