@@ -281,7 +281,7 @@ img{
 }
 
 .main{
-	padding: 50px 0;
+	padding-top: 10px;
 	background: url("../img/main-slide-bg.jpg") repeat-x left top;
 	background-size: cover;
 	&-video{
@@ -289,8 +289,8 @@ img{
 		padding-bottom: 39.42%;
 		padding-top: 25px;
 		height: 0;
-		border: 5px solid #000;
-		border-radius: 8px;
+		// border: 5px solid #000;
+		// border-radius: 8px;
 		iframe{
 			position: absolute;
 			top: 0;
@@ -553,13 +553,18 @@ img{
 				background-repeat: no-repeat;
 				.heart-btn{
 					left: 75%;
-					margin-left: 6px;
+					margin-left: -19px;
 				}
 			}
 			.catalog-item__title,
 			.catalog-item__price{
 				padding-left: 50%;
 				margin-left: 6px;
+			}
+			&:hover{
+				.heart-btn{
+					margin-left: -104px!important;
+				}
 			}
 		}
 		&--action{
@@ -608,7 +613,7 @@ img{
 				position: absolute;
 				bottom: -20px;
 				left: 50%;
-				transform: translateX(-50%);
+				margin-left: -25px;
 				display: block;
 				width: 50px;
 				height: 50px;
@@ -630,15 +635,12 @@ img{
 					position: absolute;
 					top: 50%;
 					left: 50%;
-					transform: translate(-50%, -50%);
+					margin: -9px 0 0 -9px;
 					opacity: 1;
 					.trn;
 				}
 				&:hover{
-					-webkit-transform: translateX(-50%) scale(1.1);
-					-moz-transform: translateX(-50%) scale(1.1);
-					-o-transform: translateX(-50%) scale(1.1);
-					transform: translateX(-50%) scale(1.1);
+					transform: scale(1.1);
 				}
 			}
 		}
@@ -667,6 +669,7 @@ img{
 				background: #9ececd;
 				color: #fff;
 				width: 220px;
+				margin-left: -110px;
 				border-radius: 25px;
 				font-size: 18px;
 				text-shadow: 0 2px 2px rgba(32, 15, 8, 0.15);
@@ -1683,6 +1686,10 @@ img{
 	}
 	.catalog-item:hover .heart-btn{
 		width: 180px;
+		margin-left: -90px;
+	}
+	.catalog-item--big:hover .heart-btn{
+		margin-left: -84px!important;
 	}
 	.reviews-item--big .reviews-text-wr{
 		position: static;
@@ -1940,6 +1947,7 @@ img{
 	}
 	.catalog-item--big .catalog-item__image .heart-btn {
 		left: 50%;
+		margin-left: -90px!important;
 	}
 	.catalog-item__title {
 		font-size: 25px;
@@ -2027,11 +2035,12 @@ img{
 		background: #9ececd;
 		color: #fff;
 		width: 180px;
+		margin-left: -90px;
 		border-radius: 25px;
 		font-size: 18px;
 		text-shadow: 0 2px 2px rgba(32, 15, 8, 0.15);
 	}
 	.catalog-item .heart-btn span {
-	    opacity: 0;
+		opacity: 0;
 	}
 }
