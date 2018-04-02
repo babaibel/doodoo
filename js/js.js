@@ -38,7 +38,10 @@ $(function() {
 	if(!$modalPopup.length) return;
 
 	var dataReview,
-			$dataSrc;
+		$reviewSrc,
+		dataProduct,
+		$productSrc,
+		productName;
 
 	$modalPopup.magnificPopup({
 		type: 'inline',
@@ -49,18 +52,27 @@ $(function() {
 		callbacks: {
 			elementParse: function(item) {
 				dataReview = item.el.data('review');
-				$dataSrc = $(item.src)
+				dataProduct = item.el.data('product');
+				productName = item.el.closest('.catalog-item').find('.catalog-item__title').text();
+				$reviewSrc = $(item.src);
+				$productSrc = $(item.src);
 				if(dataReview!==undefined){
-					$dataSrc.addClass(dataReview);
+					$reviewSrc.addClass(dataReview);
+				}
+				if(dataProduct!==undefined){
+					$productSrc.addClass(dataProduct);
+					$productSrc.find('.item-title').text(productName);
 				}
 			},
 			open: function() {
-				$('.js-popup-slider, .js-popup-slider-preview').slick('reinit');
+				$('.js-popup-slider:visible, .js-popup-slider-preview:visible').slick('reinit');
 			},
 			close: function() {
-				console.log(dataReview);
 				if(dataReview!==undefined){
-					$dataSrc.removeClass(dataReview);
+					$reviewSrc.removeClass(dataReview);
+				}
+				if(dataProduct!==undefined){
+					$productSrc.removeClass(dataProduct);
 				}
 			}
 		}
