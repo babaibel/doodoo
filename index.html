@@ -76,9 +76,6 @@
 
 	<section class="main" id="main">
 		<div class="wrap">
-			<!-- <div class="main-video">
-				<iframe width="560" height="315" src="https://www.youtube.com/embed/4R-D_AbunPk?rel=0&amp;controls=0&amp;showinfo=0&amp;autoplay=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-			</div> -->
 			<div class="main-content">
 				<h1 class="h1-title">Умная игрушка <br/>DooDoo</h1>
 				<p class="h1-subtitle">укладывает малыша спать <br/>за 3 минуты</p>
@@ -118,7 +115,7 @@
 		</div>
 		<div class="wrap">
 			<div class="reviews js-reviews">
-				<a href="#review-modal" class="reviews-item js-popup-modal">
+				<a href="#review-modal" class="reviews-item js-popup-modal" data-review="review1">
 					<div class="reviews-item__photo">
 						<img src="img/anna-sedokova.jpg" alt="Анна Седокова об игрушке DooDoo">
 					</div>
@@ -127,7 +124,7 @@
 						<div class="reviews-text">Мои подруги знают, что я современная мама и люблю всякие эксперименты. Поэтому посоветовали перед рождением Гектора заказать плюшевого помощника DooDoo.</div>
 					</div>
 				</a>
-				<a href="#" class="reviews-item reviews-item--big">
+				<a href="#review-modal" class="reviews-item reviews-item--big js-popup-modal" data-review="review2">
 					<div class="reviews-item__photo">
 						<img src="img/polina-gagarina.jpg" alt="">
 					</div>
@@ -138,7 +135,7 @@
 						</div>
 					</div>
 				</a>
-				<a href="#" class="reviews-item">
+				<a href="#review-modal" class="reviews-item js-popup-modal" data-review="review3">
 					<div class="reviews-item__photo">
 						<img src="img/anna-khilkevich.jpg" alt="Анна Хилькевич об игрушке DooDoo">
 					</div>
@@ -410,7 +407,7 @@
 		<div class="wrap">
 			<div class="rounded-reviews-wr">
 				<div class="rounded-reviews-col">
-					<a href="#review-modal" class="rounded-reviews-item js-popup-modal">
+					<a href="#review-modal" class="rounded-reviews-item js-popup-modal" data-review="review4">
 						<div class="rounded-reviews__photo" style="background-image: url('img/kseniyaivashko.jpg');">
 							<span>Читать отзыв</span>
 						</div>
@@ -418,7 +415,7 @@
 					</a>
 				</div>
 				<div class="rounded-reviews-col">
-					<a href="#" class="rounded-reviews-item js-popup-modal">
+					<a href="#review-modal" class="rounded-reviews-item js-popup-modal" data-review="review5">
 						<div class="rounded-reviews__photo" style="background-image: url('img/makarevi4.jpg');">
 							<span>Читать отзыв</span>
 						</div>
@@ -426,7 +423,7 @@
 					</a>
 				</div>
 				<div class="rounded-reviews-col">
-					<a href="#" class="rounded-reviews-item js-popup-modal">
+					<a href="#review-modal" class="rounded-reviews-item js-popup-modal" data-review="review6">
 						<div class="rounded-reviews__photo" style="background-image: url('img/vel_enamored.jpg'); background-position: right center;">
 							<span>Читать отзыв</span>
 						</div>
@@ -437,7 +434,7 @@
 			<div class="js-review-hide">
 				<div class="rounded-reviews-wr">
 					<div class="rounded-reviews-col">
-						<a href="#review-modal" class="rounded-reviews-item js-popup-modal">
+						<a href="#review-modal" class="rounded-reviews-item js-popup-modal" data-review="review7">
 							<div class="rounded-reviews__photo" style="background-image: url('img/kosmetik_klupik.jpg');">
 								<span>Читать отзыв</span>
 							</div>
@@ -445,7 +442,7 @@
 						</a>
 					</div>
 					<div class="rounded-reviews-col">
-						<a href="#" class="rounded-reviews-item js-popup-modal">
+						<a href="#review-modal" class="rounded-reviews-item js-popup-modal" data-review="review8">
 							<div class="rounded-reviews__photo" style="background-image: url('img/daria_sssh.jpg');">
 								<span>Читать отзыв</span>
 							</div>
@@ -453,7 +450,7 @@
 						</a>
 					</div>
 					<div class="rounded-reviews-col">
-						<a href="#" class="rounded-reviews-item js-popup-modal">
+						<a href="#review-modal" class="rounded-reviews-item js-popup-modal" data-review="review9">
 							<div class="rounded-reviews__photo" style="background-image: url('img/kitty_yefimenko.jpg');">
 								<span>Читать отзыв</span>
 							</div>
@@ -465,7 +462,7 @@
 			<div class="js-review-hide">
 				<div class="rounded-reviews-wr">
 					<div class="rounded-reviews-col">
-						<a href="#review-modal" class="rounded-reviews-item js-popup-modal">
+						<a href="#review-modal" class="rounded-reviews-item js-popup-modal" data-review="review10">
 							<div class="rounded-reviews__photo" style="background-image: url('img/sonya_neks_.jpg'); background-position: left center;">
 								<span>Читать отзыв</span>
 							</div>
@@ -473,7 +470,7 @@
 						</a>
 					</div>
 					<div class="rounded-reviews-col">
-						<a href="#" class="rounded-reviews-item js-popup-modal">
+						<a href="#review-modal" class="rounded-reviews-item js-popup-modal" data-review="review11">
 							<div class="rounded-reviews__photo" style="background-image: url('img/aizalovesam.jpg');">
 								<span>Читать отзыв</span>
 							</div>
@@ -481,7 +478,7 @@
 						</a>
 					</div>
 					<div class="rounded-reviews-col">
-						<a href="#" class="rounded-reviews-item js-popup-modal">
+						<a href="#review-modal" class="rounded-reviews-item js-popup-modal" data-review="review12">
 							<div class="rounded-reviews__photo" style="background-image: url('img/botanovna_.jpg'); background-position: right center;">
 								<span>Читать отзыв</span>
 							</div>
@@ -691,7 +688,7 @@
 			<span class="popup-modal-dismiss icon-cross"></span>
 		</div>
 		<div class="popup-block__body">
-			<div class="">
+			<div class="popup-review-1">
 				<div class="popup-title">Анна Седокова</div>
 				<div class="popup-text">
 				Как вы думаете я успеваю записывать песни, ездить на концерты, встречаться с
@@ -710,13 +707,13 @@
 				которым он не расстаётся, даже когда мы на прогулке или в дороге. Е А ещё он
 				такой клёвый на ощупь, сама бы с ним в обнимку засыпала.</div>
 			</div>
-			<div class="">
+			<div class="popup-review-2">
 				<div class="popup-title">Полина Гагарина</div>
 				<div class="popup-text">Этот мишка изменил мое отношение к детскому сну. Вместе с ним мы крепче спим, меньше капризничаем и, мне кажется, видим первые сладкие сны)<br/>
 				Всё просто, у нас в доме появился мягкий, уютный нянь. Это умная игрушка от @doodootoys. Я нашла её в инстаграме. На днях уложила Мию и рядом положила этого мишку. Через полчаса малышка заплакала. Я хотела подойти и убаюкать её, но игрушка сама включила розовый шум. Такой звук дети слышат в мамином животе во время беременности. Мия поворочалась и почти сразу уснула, а я в полном изумлении продолжила заниматься своими делами.<br/>
 				Родители, вы понимаете, что это открытие не знаю как для вас, но для меня настоящая находка?! Это просто гениально, почему об этих игрушках не говорят по телевизору? ̅Теперь мишка наш лучший друг и помощник в убаюкивании. Когда Мия подрастёт, я переключу режим на колыбельную!</div>
 			</div>
-			<div class="">
+			<div class="popup-review-3">
 				<div class="popup-title">Анна Хилькевич</div>
 				<div class="popup-text">Расскажу историю про сонного друга Ри от @doodootoy.
 				Он с самого детства заботится о ее снах. Мы шли в кроватку, я включала мишку,
@@ -730,7 +727,7 @@
 				Интересно, как дальше будет развиваться их дружба?</div>
 			</div>
 			<!-- Круглые отзывы -->
-			<div class="">
+			<div class="popup-review-4">
 				<div class="popup-title">Ксения <br/><a href="https://www.instagram.com/kseniyaivashko/">@kseniyaivashko</a></div>
 				<div class="popup-text">
 					Долго ломала голову над подарком к 8 марта для Алишки. Хотелось подарить игрушку и не
@@ -752,7 +749,7 @@
 					@doodootoy.
 				</div>
 			</div>
-			<div class="">
+			<div class="popup-review-5">
 				<div class="popup-title">Юлия <br/><a href="https://www.instagram.com/makarevi4/">@makarevi4</a></div>
 				<div class="popup-text">
 					Это будет очень-очень большой пост-отзыв об игрушке @doodootoy.
@@ -783,7 +780,7 @@
 					поглаживаниями по головке и моим присутствием рядом.
 				</div>
 			</div>
-			<div class="">
+			<div class="popup-review-6">
 				<div class="popup-title">Валерия <br/><a href="https://www.instagram.com/vel_enamored/">@vel_enamored</a></div>
 				<div class="popup-text">
 					Наверное, для каждой молодой мамы одной из проблем является сон малыша. «Как его
@@ -811,7 +808,7 @@
 					Кто пробовал, ваши детки засыпали под белый шум?
 				</div>
 			</div>
-			<div class="">
+			<div class="popup-review-7">
 				<div class="popup-title">Юлия <br/><a href="https://www.instagram.com/kosmetik_klupik/">@kosmetik_klupik</a></div>
 				<div class="popup-text">
 					Спасибо нашему Деду морозу и @doodootoy за этого замечательного мишку - Марселя (или
@@ -822,7 +819,7 @@
 					#любимыйсынок #Сашенька
 				</div>
 			</div>
-			<div class="">
+			<div class="popup-review-8">
 				<div class="popup-title">Дарья <br/><a href="https://www.instagram.com/daria_sss/">@daria_sssh</a></div>
 				<div class="popup-text">
 					Воссоединение моих заек произошло.<br/>
@@ -837,7 +834,7 @@
 					s#minsk#belarus#минск#беларусь#дуду#дудутойс#тепло#инстамама#блогмамы
 				</div>
 			</div>
-			<div class="">
+			<div class="popup-review-9">
 				<div class="popup-title">Екатерина <br/><a href="https://www.instagram.com/kitty_yefimenko/">@kitty_yefimenko</a></div>
 				<div class="popup-text">
 					К нам сегодня приехал этот легендарный мишка Матис @doodootoy. Говорят, с ним ребёнок
@@ -847,7 +844,7 @@
 					@doodootoy #doodoo #doodootoys_official #lovemybaby
 				</div>
 			</div>
-			<div class="">
+			<div class="popup-review-10">
 				<div class="popup-title">София <br/><a href="https://www.instagram.com/sonya_neks_/">@sonya_neks_</a></div>
 				<div class="popup-text">
 					У нас новая игрушка. Помимо того, что мишка идеально вписался в интерьер, так он оказался
@@ -860,7 +857,7 @@
 					Еще мишка работает, как ночник, переливается разными цветами (засняла в сториз).
 				</div>
 			</div>
-			<div class="">
+			<div class="popup-review-11">
 				<div class="popup-title">Айза <br/><a href="https://www.instagram.com/aizalovesam/">@aizalovesam</a></div>
 				<div class="popup-text">
 					С добрым утром, любимые!!! У Элвиса есть две любимые игрушки! И обе зайки) зайчик
@@ -872,7 +869,7 @@
 					другом) а вот ещё одно, год спустя) время летит, а Дуду @doodootoy с нами)
 				</div>
 			</div>
-			<div class="">
+			<div class="popup-review-12">
 				<div class="popup-title">Алина <br/><a href="https://www.instagram.com/botanovna_/">@botanovna_</a></div>
 				<div class="popup-text">
 					Это игрушка, которая поможет нам спать крепче.<br/>

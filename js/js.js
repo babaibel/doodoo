@@ -37,6 +37,9 @@ $(function() {
 	var $modalPopup = $('.js-popup-modal');
 	if(!$modalPopup.length) return;
 
+	var dataReview,
+			$dataSrc;
+
 	$modalPopup.magnificPopup({
 		type: 'inline',
 		preloader: false,
@@ -44,8 +47,21 @@ $(function() {
 		mainClass: 'mfp-fade popup-modal-overlay',
 		removalDelay: 300,
 		callbacks: {
+			elementParse: function(item) {
+				dataReview = item.el.data('review');
+				$dataSrc = $(item.src)
+				if(dataReview!==undefined){
+					$dataSrc.addClass(dataReview);
+				}
+			},
 			open: function() {
 				$('.js-popup-slider, .js-popup-slider-preview').slick('reinit');
+			},
+			close: function() {
+				console.log(dataReview);
+				if(dataReview!==undefined){
+					$dataSrc.removeClass(dataReview);
+				}
 			}
 		}
 		

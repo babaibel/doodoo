@@ -1505,6 +1505,59 @@ img {
   max-height: 80px;
   display: inline-block;
 }
+.popup-review-1,
+.popup-review-2,
+.popup-review-3,
+.popup-review-4,
+.popup-review-5,
+.popup-review-6,
+.popup-review-7,
+.popup-review-8,
+.popup-review-9,
+.popup-review-10,
+.popup-review-11,
+.popup-review-12 {
+  display: none;
+}
+.review1 .popup-review-1 {
+  display: block;
+}
+.review2 .popup-review-2 {
+  display: block;
+}
+.review3 .popup-review-3 {
+  display: block;
+}
+.review4 .popup-review-4 {
+  display: block;
+}
+.review5 .popup-review-5 {
+  display: block;
+}
+.review1 .popup-review-1 {
+  display: block;
+}
+.review6 .popup-review-6 {
+  display: block;
+}
+.review7 .popup-review-7 {
+  display: block;
+}
+.review8 .popup-review-8 {
+  display: block;
+}
+.review9 .popup-review-9 {
+  display: block;
+}
+.review10 .popup-review-10 {
+  display: block;
+}
+.review11 .popup-review-11 {
+  display: block;
+}
+.review12 .popup-review-12 {
+  display: block;
+}
 @media (max-width: 1199px) {
   .wrap {
     max-width: 960px;
@@ -1591,7 +1644,8 @@ img {
   .phone-btn {
     width: 50px;
     height: 50px;
-    background-size: 48px;
+    background-size: 46px;
+    background-position: 50% 50%;
   }
   .menu:before {
     display: none;
@@ -1755,6 +1809,13 @@ img {
   .reviews-item--big .reviews-text {
     padding: 15px 20px;
   }
+  .rounded-reviews__photo {
+    width: 200px;
+    height: 200px;
+  }
+  .rounded-reviews__photo span {
+    line-height: 200px;
+  }
 }
 @media (max-width: 767px) {
   .wrap {
@@ -1818,10 +1879,12 @@ img {
     padding: 0;
   }
   .main {
-    padding: 25px 0;
+    background-size: 1400px;
+    background-position: 34% 100%;
+    background-color: #d9dadc;
   }
-  .main-video {
-    padding-bottom: 36%;
+  .main-content {
+    padding: 0 0 320px;
   }
   .works__item {
     width: 100%;
@@ -2092,5 +2155,22 @@ img {
   }
   .catalog-item .heart-btn span {
     opacity: 0;
+  }
+  .rounded-reviews-wr {
+    display: block;
+  }
+  .rounded-reviews-col {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
+@media (max-width: 479px) {
+  .main {
+    background-size: 400%;
+    background-position: 40% 100%;
+    background-color: #d9dadc;
+  }
+  .main-content {
+    padding: 0 0 90%;
   }
 }
