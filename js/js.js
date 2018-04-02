@@ -51,17 +51,20 @@ $(function() {
 		removalDelay: 300,
 		callbacks: {
 			elementParse: function(item) {
-				dataReview = item.el.data('review');
-				dataProduct = item.el.data('product');
-				productName = item.el.closest('.catalog-item').find('.catalog-item__title').text();
-				$reviewSrc = $(item.src);
-				$productSrc = $(item.src);
-				if(dataReview!==undefined){
-					$reviewSrc.addClass(dataReview);
-				}
-				if(dataProduct!==undefined){
-					$productSrc.addClass(dataProduct);
-					$productSrc.find('.item-title').text(productName);
+				console.log(item);
+				if(item.src!=="#after-modal"){
+					dataReview = item.el.data('review');
+					dataProduct = item.el.data('product');
+					productName = item.el.closest('.catalog-item').find('.catalog-item__title').text();
+					$reviewSrc = $(item.src);
+					$productSrc = $(item.src);
+					if(dataReview!==undefined){
+						$reviewSrc.addClass(dataReview);
+					}
+					if(dataProduct!==undefined){
+						$productSrc.addClass(dataProduct);
+						$productSrc.find('.item-title').text(productName);
+					}
 				}
 			},
 			open: function() {
