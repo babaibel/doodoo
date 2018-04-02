@@ -1,6 +1,6 @@
 <?
 if((isset($_POST['name']))&&(isset($_POST['phone'])&&$_POST['phone']!="")&&(isset($_POST['adress']))&&(isset($_POST['product'])&&$_POST['product']!="")){ //Проверка отправилось ли наше поля name и не пустые ли они
-        $to = 'prasolova20@gmail.com'; //Почта получателя, через запятую можно указать сколько угодно адресов
+        $to = 'legion.formation@gmail.com'; //Почта получателя, через запятую можно указать сколько угодно адресов
         $subject = 'Оформлен заказ'; //Заголовок сообщения
         $message = '
                 <html>
