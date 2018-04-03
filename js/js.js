@@ -41,7 +41,8 @@ $(function() {
 		$reviewSrc,
 		dataProduct,
 		$productSrc,
-		productName;
+		productName,
+		dataPrice;
 
 	$modalPopup.magnificPopup({
 		type: 'inline',
@@ -55,6 +56,8 @@ $(function() {
 				if(item.src!=="#after-modal"){
 					dataReview = item.el.data('review');
 					dataProduct = item.el.data('product');
+					dataPrice = item.el.data('price');
+					console.log(dataPrice);
 					productName = item.el.closest('.catalog-item').find('.catalog-item__title').text();
 					$reviewSrc = $(item.src);
 					$productSrc = $(item.src);
@@ -64,6 +67,9 @@ $(function() {
 					if(dataProduct!==undefined){
 						$productSrc.addClass(dataProduct);
 						$productSrc.find('.item-title').text(productName);
+						if(dataPrice!==undefined){
+							$productSrc.find('.item-price').text(dataPrice);
+						}
 					}
 				}
 			},
@@ -76,6 +82,7 @@ $(function() {
 				}
 				if(dataProduct!==undefined){
 					$productSrc.removeClass(dataProduct);
+					dataPrice = undefined;
 				}
 			}
 		}
