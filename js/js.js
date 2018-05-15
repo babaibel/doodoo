@@ -356,3 +356,14 @@ $(window).stellar({
 
 
 $('.js-phone').mask("+375 (999) 999-99-99");
+
+// $(function() {
+
+// 	$('.gallery-item').magnificPopup({
+// 	  type: 'image',
+// 	  gallery:{
+// 	    enabled:true
+// 	  }
+// 	});
+
+// });
