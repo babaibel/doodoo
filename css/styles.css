@@ -1126,12 +1126,25 @@ img {
 .text-page ul li {
   margin-bottom: 7px;
 }
+.text-page .left-img {
+  display: block;
+  float: left;
+  margin: 10px 20px 10px 0;
+}
+.inner-page {
+  display: flex;
+  flex-direction: column;
+}
 .inner-page .footer-wr {
   background: #fafafa;
+  flex-shrink: 0;
 }
 .inner-page .footer-wr:after {
   background-image: url("../img/wave-bg22.png");
   top: -7px;
+}
+.wrapper {
+  flex: 1 0 auto;
 }
 .popup-block {
   position: relative;

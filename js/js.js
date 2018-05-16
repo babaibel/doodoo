@@ -367,3 +367,9 @@ $('.js-phone').mask("+375 (999) 999-99-99");
 // 	});
 
 // });
+
+$(function() {
+	$('html,body').animate({
+	  scrollTop: $(window.location.hash).offset().top
+	});
+});
