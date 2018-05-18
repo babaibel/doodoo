@@ -42,7 +42,9 @@ $(function() {
 		dataProduct,
 		$productSrc,
 		productName,
-		dataPrice;
+		dataPrice,
+		magnificPopup,
+		curElement;
 
 	$modalPopup.magnificPopup({
 		type: 'inline',
@@ -52,8 +54,8 @@ $(function() {
 		removalDelay: 300,
 		callbacks: {
 			elementParse: function(item) {
-				console.log(item);
-				if(item.src!=="#after-modal"){
+				console.log(item.src);
+				if(item.src!=="#after-modal" && item.src!=="#sertifikat"){
 					dataReview = item.el.data('review');
 					dataProduct = item.el.data('product');
 					dataPrice = item.el.data('price');
@@ -74,6 +76,8 @@ $(function() {
 				}
 			},
 			open: function() {
+				magnificPopup = $.magnificPopup.instance;
+				curElement = magnificPopup.st.el;
 				$('.js-popup-slider:visible, .js-popup-slider-preview:visible').slick('reinit');
 			},
 			close: function() {
@@ -89,9 +93,20 @@ $(function() {
 		
 	});
 
-	$(document).on('click', '.popup-modal-dismiss', function (e) {
+	$(document).on('click', '.js-order-second', function (e) {
 		e.preventDefault();
-		$.magnificPopup.close();
+		$(this).closest('.popup-block').addClass('_second');
+	});
+
+	$(document).on('click', '.popup-modal-dismiss', function (e) {
+		if($(this).closest('.popup-block').is('#sertifikat')){
+			curElement.click();
+		}
+		else{
+			$(this).closest('.popup-block').removeClass('_second');
+			e.preventDefault();
+			$.magnificPopup.close();
+		}
 	});
 });
 
@@ -143,7 +158,7 @@ $(function() {
 			} else {
 				btn.removeClass('disabled')
 			}
-		}, 500);
+		}, 800);
 
 
 		// Событие клика по кнопке отправить
@@ -241,34 +256,40 @@ $(function() {
 			return false
 			} else {
 				form.find('#product').val(form.find('.item-title').text());
-				form.submit(function (){
+				var pay = form.find('.js-pay:checked').val();
+				if(pay == 'online'){
+					// сделать оплату онлайн через сервис
+					alert('Надо сделать');
+				} else{
+					form.submit(function (){
 
-					var data = form.serialize();
+						var data = form.serialize();
 
-					$.ajax({ 
-						// инициaлизируeм ajax зaпрoс
-						type: 'POST', // oтпрaвляeм в POST фoрмaтe, мoжнo GET
-						url: 'mail2.php', // путь дo oбрaбoтчикa, у нaс oн лeжит в тoй жe пaпкe
-						data: data, // дaнныe для oтпрaвки
-						error: function(xhr, status, error) {
-							console.log(xhr.responseText + '|\n' + status + '|\n' +error);
-						},
-						success: function(data){ // сoбытиe пoслe удaчнoгo oбрaщeния к сeрвeру и пoлучeния oтвeтa
-							form[0].reset();
-							$.magnificPopup.open({
-								showCloseBtn: false,
-								removalDelay: 300,
-								mainClass: 'mfp-fade',
-								items: {
-									src: '#after-modal'
-								},
-								type: 'inline'
-								}, 
-							0);
-						}
+						$.ajax({ 
+							// инициaлизируeм ajax зaпрoс
+							type: 'POST', // oтпрaвляeм в POST фoрмaтe, мoжнo GET
+							url: 'mail2.php', // путь дo oбрaбoтчикa, у нaс oн лeжит в тoй жe пaпкe
+							data: data, // дaнныe для oтпрaвки
+							error: function(xhr, status, error) {
+								console.log(xhr.responseText + '|\n' + status + '|\n' +error);
+							},
+							success: function(data){ // сoбытиe пoслe удaчнoгo oбрaщeния к сeрвeру и пoлучeния oтвeтa
+								form[0].reset();
+								$.magnificPopup.open({
+									showCloseBtn: false,
+									removalDelay: 300,
+									mainClass: 'mfp-fade',
+									items: {
+										src: '#after-modal'
+									},
+									type: 'inline'
+									}, 
+								0);
+							}
+						});
+						return false;
 					});
-					return false;
-				});
+				}
 			}
 		});
 	});
@@ -357,19 +378,11 @@ $(window).stellar({
 
 $('.js-phone').mask("+375 (999) 999-99-99");
 
-// $(function() {
-
-// 	$('.gallery-item').magnificPopup({
-// 	  type: 'image',
-// 	  gallery:{
-// 	    enabled:true
-// 	  }
-// 	});
-
-// });
-
 $(function() {
-	$('html,body').animate({
-	  scrollTop: $(window.location.hash).offset().top
-	});
+	var hash = window.location.hash;
+	if(hash !== ""){
+		$('html,body').animate({
+			scrollTop: $(window.location.hash).offset().top
+		});
+	}
 });

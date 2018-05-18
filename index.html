@@ -596,7 +596,7 @@
 					<div class="footer-menu__col">
 						<ul class="footer-menu">
 							<li><a href="#contacts" class="js-menu-link">Оплата</a></li>
-							<li><a href="cancel-and-return.html" class="js-menu-link">Отмена и возврат покупки</a></li>
+							<li><a href="cancel-and-return.html" target="_blank">Отмена и возврат покупки</a></li>
 						</ul>
 					</div>
 				</div>
@@ -664,7 +664,12 @@
 
 	<div id="order-modal" class="popup-block popup-block--blue mfp-hide">
 		<div class="popup-block__header">
-			<h2 class="h2-popup-title">ФОРМА ПОКУПКИ</h2>
+			<div class="order-form-first">
+				<h2 class="h2-popup-title">ФОРМА ПОКУПКИ</h2>
+			</div>
+			<div class="order-form-second">
+				<h2 class="h2-popup-title">ОФОРМЛЕНИЕ ЗАКАЗА</h2>
+			</div>
 			<span class="popup-modal-dismiss icon-cross"></span>
 		</div>
 		<div class="popup-block__body">
@@ -1039,47 +1044,67 @@
 								</div>
 							</div>
 
-							<a href="img/sertifikat.jpg" class="sertifikat js-gallery-item">Сертификат<br />соответствия</a>
-						</div>
-						<div class="order-form__right">
-							<div class="item-title">МИШКА МАРТИН</div>
-							<div class="item-price">145 р.</div>
-							<div class="item-text">
-								<p>Включается автоматически.<br/>
-								Doodoo распознает звуки просыпающегося малыша, включается, убаюкивает кроху и самостоятельно выключается. Помогает малышу легче и быстрей засыпать, а также значительно реже просыпаться при переходе из одной фазы сна в другую.</p>
-
-								<p>2 режима работы.<br/>
-								Розовый шум — эффективен в возрасте от 0 до 8-10 месяцев. Колыбельная мелодия подходит ребятам постарше: с 8-10 месяцев и до 3-х лет</p>
-
-								<p>
-									Высота 23 см.<br/>
-									Ширина 15 см.
-								</p>
-
-								<p>
-									На звуковое устройство действует пожизненная гарантия. Если звуковой юнит неисправен, свяжитесь с нами, и мы осуществим замену.
-								</p>
-
-								<p>
-									ПРОИЗВОДИТЕЛЬ: «Babiage» (Ватерлоо, Бельгия)<br/>
-									ИМПОРТЁР: ИП Воротинов Е.О.  (Минск, Беларусь)
-								</p>
+							<div class="order-form-first">
+								<a href="#sertifikat" class="sertifikat js-popup-modal">Сертификат<br />соответствия</a>
 							</div>
-						</div>
-					</div>
-					<div class="order-form__row">
-						<div class="order-form__left">
-							<div class="order-form-tip">
-								ДЛЯ ОФОРМЛЕНИЯ ЗАКАЗА
+
+							<div class="order-form-second">
+								<div class="item-title">МИШКА МАРТИН</div>
+								<div class="item-price">145 р.</div>
 							</div>
 						</div>
 						<div class="order-form__right">
-							<input type="text" class="order-form__field" name="name" id="name" placeholder="Ваше имя:">
-							<input type="text" class="order-form__field js-phone rfield" name="phone" id="phone" placeholder="Ваш телефон:">
-							<input type="text" class="order-form__field" name="adress" id="adress" placeholder="Ваш адрес:">
-							<input type="hidden" class="order-form__field" name="product" id="product" placeholder="Ваше имя:">
-							<div class="order-form__botline">
-								<input type="submit" value="КУПИТЬ" class="order-btn js-order-form-btn">
+							<div class="order-form-first">
+								<div class="item-title">МИШКА МАРТИН</div>
+								<div class="item-price">145 р.</div>
+								<div class="item-text">
+									<p>Включается автоматически.<br/>
+									Doodoo распознает звуки просыпающегося малыша, включается, убаюкивает кроху и самостоятельно выключается. Помогает малышу легче и быстрей засыпать, а также значительно реже просыпаться при переходе из одной фазы сна в другую.</p>
+
+									<p>2 режима работы.<br/>
+									Розовый шум — эффективен в возрасте от 0 до 8-10 месяцев. Колыбельная мелодия подходит ребятам постарше: с 8-10 месяцев и до 3-х лет</p>
+
+									<p class="small">
+										На звуковое устройство действует пожизненная гарантия. Если звуковой юнит неисправен, свяжитесь с нами, и мы осуществим замену.<br/><br/>
+
+										ПРОИЗВОДИТЕЛЬ: «Babiage» (Ватерлоо, Бельгия)<br/>
+										ИМПОРТЁР: ИП Воротинов Е.О.  (Минск, Беларусь)
+									</p>
+
+									<a href="#!" class="btn-second js-order-second">Купить</a>
+
+									<p class="small">Высота 23 см.<br>Ширина 15 см.</p>
+								</div>
+							</div>
+							<div class="order-form-second">
+								<div class="order-form-block">
+									<p class="order-form-block__title">ШАГ 1: Кому и куда доставить</p>
+									<input type="text" class="order-form__field" name="name" id="name" placeholder="Ваше имя:">
+									<input type="text" class="order-form__field js-phone rfield" name="phone" id="phone" placeholder="Ваш телефон:">
+									<input type="text" class="order-form__field" name="adress" id="adress" placeholder="Ваш адрес:">
+									<input type="text" class="order-form__field" name="email" id="email" placeholder="Ваш E-mail:">
+									<input type="hidden" class="order-form__field" name="product" id="product">
+								</div>
+								<div class="order-form-block">
+									<p class="order-form-block__title">ШАГ 2: Оплата</p>
+									<p class="order-form-block__row">
+										<label class="radio">
+											<input type="radio" value="online" hidden checked name="radio" class="radio__input js-pay">
+											<span class="radio__box"></span>
+											<span class="radio__text">Онлайн</span>
+										</label>
+									</p>
+									<p class="order-form-block__row">
+										<label class="radio">
+											<input type="radio" value="delivery" hidden name="radio" class="radio__input js-pay">
+											<span class="radio__box"></span>
+											<span class="radio__text">При получении</span>
+										</label>
+									</p>
+								</div>
+								<div class="order-form__botline">
+									<input type="submit" value="Оформить заказ" class="order-btn js-order-form-btn">
+								</div>
 							</div>
 						</div>
 					</div>
@@ -1299,6 +1324,16 @@
 		</div>
 		<div class="popup-block__body">
 			<div class="popup-text">Скоро мы вам перезвоним!</div>
+		</div>
+	</div>
+
+	<div id="sertifikat" class="popup-block popup-block--grey mfp-hide">
+		<div class="popup-block__header">
+			<h2 class="h2-popup-title">Сертификат</h2>
+			<span class="popup-modal-dismiss icon-cross"></span>
+		</div>
+		<div class="popup-block__body">
+			<img src="img/sertifikat.jpg" alt="Сертификат">
 		</div>
 	</div>
 

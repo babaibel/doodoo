@@ -1,6 +1,6 @@
 <?
-if((isset($_POST['name']))&&(isset($_POST['phone'])&&$_POST['phone']!="")&&(isset($_POST['adress']))&&(isset($_POST['product'])&&$_POST['product']!="")){ //Проверка отправилось ли наше поля name и не пустые ли они
-        $to = 'legion.formation@gmail.com'; //Почта получателя, через запятую можно указать сколько угодно адресов
+if((isset($_POST['name']))&&(isset($_POST['phone'])&&$_POST['phone']!="")&&(isset($_POST['adress']))&&(isset($_POST['email']))&&(isset($_POST['product'])&&$_POST['product']!="")){ //Проверка отправилось ли наше поля name и не пустые ли они
+        $to = 'prasolova20@gmail.com'; //Почта получателя, через запятую можно указать сколько угодно адресов
         $subject = 'Оформлен заказ'; //Заголовок сообщения
         $message = '
                 <html>
@@ -13,6 +13,7 @@ if((isset($_POST['name']))&&(isset($_POST['phone'])&&$_POST['phone']!="")&&(isse
                         <p>Имя: <b>'.$_POST['name'].'</b></p> 
                         <p>Телефон: <b>'.$_POST['phone'].'</b></p> 
                         <p>Адрес: <b>'.$_POST['adress'].'</b></p> 
+                        <p>E-mail: <b>'.$_POST['email'].'</b></p> 
                     </body>
                 </html>'; //Текст нащего сообщения можно использовать HTML теги
         $headers  = "Content-type: text/html; charset=utf-8 \r\n"; //Кодировка письма
