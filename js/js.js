@@ -255,7 +255,7 @@ $(function() {
 			lightEmpty();
 			return false
 			} else {
-				form.find('#product').val(form.find('.item-title').text());
+				form.find('#product').val(form.find('.order-form-first .item-title').text());
 				var pay = form.find('.js-pay:checked').val();
 				if(pay == 'online'){
 					// сделать оплату онлайн через сервис
